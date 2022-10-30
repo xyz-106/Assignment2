@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/rounderBackground">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/line"
+        android:layout_width="30dp"
+        android:layout_height="150dp"
+        android:src="@drawable/line_removal_background" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="-20dp"
+        android:background="@drawable/dotred" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/whiteLine"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/imgRed"
+        android:layout_marginLeft="-35dp"
+        android:layout_marginTop="-25dp"
+        android:background="@drawable/background_line" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/dotBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/whiteLine"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="-28dp"
+        android:background="@drawable/dotblue" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/blackLine"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/dotBlue"
+        android:layout_marginLeft="-35dp"
+        android:layout_marginTop="-28dp"
+        android:background="@drawable/background_line2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/dotGrey"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_below="@id/blackLine"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="-25dp"
+        android:background="@drawable/background_circle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/dotGrey"
+        android:layout_marginLeft="-35dp"
+        android:layout_marginTop="-26dp"
+        android:background="@drawable/background_line2" />
+</RelativeLayout>

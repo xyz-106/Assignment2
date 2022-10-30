@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/test"
+    style="?attr/bottomSheetStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/background_gradient"
+        android:elevation="-20dp"
+        app:layout_collapseMode="parallax" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnClose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/background_circle2"
+        app:srcCompat="@drawable/closeicon" />
+
+    <include
+        android:id="@+id/bottomSheet"
+        layout="@layout/activity_userproile_bottomsheet_viewholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnClose"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/background_left_right_rounded"
+        android:elevation="-20dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMessage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bottomSheet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_message"
+        android:text="MESSAGE"
+        android:textColor="@color/white" />
+
+
+    <com.jshelf.assignment2.views.components.RoundedCornerImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/bottomSheet"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="28dp"
+        android:padding="@dimen/margin_medium"
+        app:borderColor="@color/teal_200"
+        app:cornerRadius="30dp"
+        app:srcCompat="@drawable/ic_baseline_share_24" />
+
+    <com.jshelf.assignment2.views.components.RoundedCornerImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/bottomSheet"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="28dp"
+        android:padding="@dimen/margin_medium"
+        app:borderColor="@color/teal_200"
+        app:cornerRadius="30dp"
+        android:layout_marginEnd="@dimen/margin_xlarge"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/ic_baseline_note_add_24" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tbProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnMessage"
+        android:layout_marginStart="@dimen/margin_xxlarge"
+        app:tabIndicatorColor="@color/teal_200"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/black" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tbProfile"
+        android:background="@color/rounderBackground" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProfile2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+</RelativeLayout>
+
+
+
+

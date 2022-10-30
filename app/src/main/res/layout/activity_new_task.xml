@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_whole">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nvView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/backButton"
+                android:layout_toEndOf="@id/backButton"
+                android:text="A Create New Task"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/backButton"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:text="Save"
+                android:textColor="@color/teal_200"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/backButton"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="CLIENT"
+                android:textColor="@color/white" />
+
+            <com.jshelf.assignment2.views.components.RoundedCornerImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/tvClient"
+                android:layout_alignStart="@id/tvClient"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:scaleType="centerCrop"
+                app:cornerRadius="30dp"
+                app:srcCompat="@drawable/profile_img" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerClient"
+                style="@style/mySpinnerItemStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvClient"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:layout_toEndOf="@id/ivProfile"
+                android:backgroundTint="@color/white"
+                android:entries="@array/list"
+                android:foregroundTint="@color/white"
+                android:popupBackground="#67656c" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinnerClient"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="@dimen/margin_medium_3"
+                android:layout_toEndOf="@id/ivProfile"
+                android:background="@drawable/background_horizontal_line" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProjectName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivProfile"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="PROJECT NAME"
+                android:textColor="@color/white2" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProjectName"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:layout_marginEnd="@dimen/margin_medium_3"
+                android:backgroundTint="@color/white"
+                android:text="A Creation a New Task"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular_2x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProjectName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtName"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="PROJECT NAME"
+                android:textColor="@color/white2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iconCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProjectName2"
+                android:layout_alignStart="@id/tvProjectName2"
+                android:src="@drawable/ic_baseline_edit_calendar_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/datePicker1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProjectName2"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_toEndOf="@id/iconCalendar"
+                android:text="Dec 24,2022"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dropDown1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProjectName2"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/datePicker1"
+                android:background="@drawable/ic_baseline_arrow_drop_down_24"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iconCalendar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProjectName2"
+                android:layout_marginStart="80dp"
+                android:layout_toEndOf="@id/dropDown1"
+                android:src="@drawable/ic_baseline_edit_calendar_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/datePicker2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProjectName2"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_toEndOf="@id/iconCalendar2"
+                android:text="Dec 24,2022"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProjectName2"
+                android:layout_marginTop="3dp"
+                android:layout_toEndOf="@id/datePicker2"
+                android:background="@drawable/ic_baseline_arrow_drop_down_24"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/line1"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iconCalendar"
+                android:layout_marginStart="-64dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/margin_medium_3"
+                android:layout_toEndOf="@id/ivProfile"
+                android:background="@drawable/background_horizontal_line" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="138dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iconCalendar2"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="@dimen/margin_medium_3"
+                android:layout_toEndOf="@id/ivProfile"
+                android:background="@drawable/background_horizontal_line" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAssigne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="ASSIGNE"
+                android:textColor="@color/white2"
+                android:textSize="@dimen/text_regular" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProfile3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAssigne"
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:layout_marginTop="-15dp" />
+
+            <include
+                android:id="@+id/plusIcon"
+                layout="@layout/activity_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAssigne"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="-10dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvProfile3"
+                android:layout_alignStart="@id/tvAssigne"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="CATEGORY"
+                android:textColor="@color/white2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tvDesign"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/tvCategory"
+                android:layout_alignStart="@id/rvProfile3"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:background="@drawable/background_function"
+                android:text="Design"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tvFrontend"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/tvCategory"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_toEndOf="@id/tvDesign"
+                android:background="@drawable/background_function2"
+                android:text="Frontend"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/tvCategory"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_toEndOf="@id/tvFrontend"
+                android:background="@drawable/background_function2"
+                android:text="Backend" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDesign"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@drawable/background_base_newtask">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_xxlarge"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginBottom="20dp"
+                    android:text="Description"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold" />
+
+                <com.jshelf.assignment2.views.components.RoundedCornerImageView
+                    android:id="@+id/ivAttachCircle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="48dp"
+                    android:padding="@dimen/margin_medium_2"
+                    android:scaleType="fitCenter"
+                    app:borderColor="@color/white2"
+                    app:cornerRadius="25dp"
+                    app:srcCompat="@drawable/ic_baseline_attach_file_24" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLine"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDescription"
+                    android:layout_alignStart="@id/tvDescription"
+                    android:background="@drawable/background_nearly_white_line" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAttachment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvLine"
+                    android:layout_alignStart="@id/tvDescription"
+                    android:text="ATTACHMENTS"
+                    android:textColor="@color/white2"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <com.jshelf.assignment2.views.components.RoundedCornerImageView
+                    android:id="@+id/ivFile"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tvAttachment"
+                    android:layout_alignStart="@id/tvDescription"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:scaleType="centerCrop"
+                    app:cornerRadius="25dp"
+                    app:srcCompat="@drawable/attachfileimg" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvReferences"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAttachment"
+                    android:layout_marginStart="@dimen/margin_medium_3"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:layout_toEndOf="@id/ivFile"
+                    android:text="References_1"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAttachment"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="@dimen/margin_medium_3"
+                    android:layout_toEndOf="@id/tvReferences"
+                    android:text="168KB"
+                    android:textColor="@color/white2" />
+
+                <com.jshelf.assignment2.views.components.RoundedCornerImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/tvAttachment"
+                    android:layout_alignEnd="@id/ivAttachCircle"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:background="@drawable/background_circle2"
+                    android:elevation="20dp"
+                    android:src="@drawable/closeicon"
+                    app:cornerRadius="15dp" />
+
+                <com.jshelf.assignment2.views.components.ProgressBar
+                    progressBarCornerRadius="3dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/tvReferences"
+                    android:layout_alignStart="@id/tvReferences"
+                    android:layout_marginTop="@dimen/text_regular_2x"
+                    android:layout_toEndOf="@id/ivFile"
+                    app:progressBarBackgroundColor="@color/white2"
+                    app:progressBarFrontColor="@color/teal_200"
+                    app:progressBarHeight="@dimen/margin_medium"
+                    app:progressBarProgress="90" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/ivFile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:background="@drawable/background_message"
+                    android:text="CREATE TASK"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--    <include-->
+    <!--        layout="@layout/activity_createtask_base"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/nvView"-->
+    <!--        android:layout_marginTop="20dp" />-->
+</RelativeLayout>

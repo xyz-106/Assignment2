@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundedCornerImageView">
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="borderColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CircularProgressBar">
+        <attr name="circleColor" format="color" />
+        <attr name="circleBorderWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressBar">
+        <attr name="progressBarHeight" format="dimension" />
+        <attr name="progressBarProgress" format="integer" />
+        <attr name="progressBarFrontColor" format="color" />
+        <attr name="progressBarBackgroundColor" format="color" />
+        <attr name="progressBarCornerRadius" format="dimension"/>
+    </declare-styleable>
+</resources>

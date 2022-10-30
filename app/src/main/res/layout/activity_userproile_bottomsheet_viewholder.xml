@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jshelf.assignment2.views.viewpods.ProfileViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="?attr/bottomSheetStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:id="@+id/tvCloseTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:text="Closed tasks"
+        android:textColor="@color/white2"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCloseTask"
+        android:layout_alignStart="@id/tvCloseTask"
+        android:layout_marginStart="20dp"
+        android:text="361"
+        android:textSize="@dimen/text_regular_2x" />
+
+
+    <com.jshelf.assignment2.views.components.RoundedCornerImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:scaleType="centerCrop"
+        app:cornerRadius="45dp"
+        app:borderWidth="8dp"
+        app:srcCompat="@drawable/profile_img2" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOpenTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:text="Open tasks"
+        android:textColor="@color/white2"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCloseTask"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="60dp"
+        android:text="3"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgProfile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Zarchary Butler Zarchey"
+        android:textSize="@dimen/text_regular_3x"
+        android:textStyle="bold"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvName"
+        android:layout_centerHorizontal="true"
+        android:text="UI Designer" />
+</com.jshelf.assignment2.views.viewpods.ProfileViewPod>

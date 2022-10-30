@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_medium_3">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="15dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:text="In Progress"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDesign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/txtProgress"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:text="#Design"
+                android:textColor="@color/white2"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/contactPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtProgress"
+                android:layout_alignStart="@id/txtProgress"
+                android:text="Contact page"
+                android:textSize="@dimen/text_regular_3x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/iconSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactPage"
+                android:layout_alignStart="@id/contactPage"
+                android:background="@drawable/ic_baseline_sms_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/smsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactPage"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_toEndOf="@id/iconSms"
+                android:text="3"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/iconAttach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactPage"
+                android:layout_toEndOf="@id/smsCount"
+                android:background="@drawable/ic_baseline_attach_file_white_24dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtAttendance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactPage"
+                android:layout_toEndOf="@id/iconAttach"
+                android:text="5"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactPage"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="70dp"
+                android:text="N:163"
+                android:textColor="@color/black" />
+
+            <com.jshelf.assignment2.views.components.RoundedCornerImageView
+                android:id="@+id/profileImg"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                app:cornerRadius="23dp"
+                app:srcCompat="@drawable/profile_img2" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

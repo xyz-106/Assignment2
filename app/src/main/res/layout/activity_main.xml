@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtDashBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/backButton"
+            android:layout_toEndOf="@id/backButton"
+            android:text="OMP DashBoard"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/txtDashBoard"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/backgroung_button"
+            android:text="In Progress"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDashBoard">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtCreatePages"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/margin_medium_3"
+                android:text="Create additional pages"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_regular_3x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCreatePages"
+                android:layout_alignStart="@id/txtCreatePages"
+                android:text="03 days | Dec 18,2019" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDate"
+                android:layout_alignStart="@id/txtCreatePages" />
+
+            <include
+                android:id="@+id/plusIcon"
+                layout="@layout/activity_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCreatePages"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="26dp"
+
+                />
+
+            <com.jshelf.assignment2.views.components.CircularProgressBar
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_below="@id/txtDate"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDate"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="30dp"
+                android:text="85%" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvProfile"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@drawable/background_rounded">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_medium_3"
+                            android:layout_marginTop="@dimen/margin_medium_3"
+                            android:layout_marginEnd="@dimen/margin_large"
+                            android:layout_marginBottom="@dimen/margin_xxlarge"
+                            android:text="Data"
+                            android:textColor="@color/white2"
+                            android:textSize="@dimen/text_regular_2x" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtTask"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/txtData"
+                            android:layout_toEndOf="@id/txtData"
+                            android:text="Task"
+                            android:textColor="@color/white2"
+                            android:textSize="@dimen/text_regular_2x" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/txtData"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="30dp"
+                            android:text="Show in Days"
+                            android:textColor="@color/white2"
+                            android:textSize="@dimen/text_regular_2x" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/txtData"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/ic_baseline_arrow_drop_down_24" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtDataPoint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtData"
+                            android:layout_alignStart="@id/txtData"
+                            android:layout_marginBottom="@dimen/margin_xxlarge"
+                            android:text="23.19"
+                            android:textColor="@color/white2" />
+
+                        <TextView
+                            android:id="@+id/txtDataPoint2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtDataPoint"
+                            android:layout_alignStart="@id/txtData"
+                            android:text="24.19"
+                            android:textColor="@color/white2" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCircleLine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtTask"
+                            android:layout_marginLeft="-20dp"
+                            android:layout_toEndOf="@id/txtData" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvEmployee"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txtTask"
+                            android:layout_marginLeft="-40dp"
+                            android:layout_toEndOf="@id/rvCircleLine" />
+                    </RelativeLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+
+            </FrameLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/bottomSheetMain"
+        layout="@layout/activity_profile" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
